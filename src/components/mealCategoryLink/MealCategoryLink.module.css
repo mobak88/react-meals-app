@@ -1,0 +1,23 @@
+.meal-categories-container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2rem;
+  padding: 3rem;
+}
+
+.meal-categories-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.meal-category-link {
+  background-color: rgb(240, 248, 255);
+  padding: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+
+.meal-category-link:hover {
+  background-color: rgb(255, 228, 196);
+}
