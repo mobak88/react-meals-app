@@ -5,11 +5,14 @@ import Category from "./pages/category/Category";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/meal/:mealId" element={<Meal />} />
-      <Route path="/category/:foodCategory" element={<Category />} />
-    </Routes>
+    <main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/category/:foodCategory" element={<Category />} />
+        <Route path="/category/:foodCategory/meal/:mealId" element={<Meal />} />
+        <Route path="/meal/:mealId" element={<Meal />} />
+      </Routes>
+    </main>
   );
 }
 
