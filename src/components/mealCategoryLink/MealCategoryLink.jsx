@@ -3,7 +3,10 @@ import styles from "./MealCategoryLink.module.css";
 
 const MealCategoryLink = ({ foodCategory }) => {
   return (
-    <Link to={foodCategory} className={styles["meal-category-link"]}>
+    <Link
+      to={`category/${foodCategory}`}
+      className={styles["meal-category-link"]}
+    >
       {foodCategory}
     </Link>
   );

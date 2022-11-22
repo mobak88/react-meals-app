@@ -6,14 +6,13 @@ import styles from "./Meal.module.css";
 
 const Meal = () => {
   const [meal, setMeal] = useState({});
-  let { mealId } = useParams();
+  const { mealId } = useParams();
 
   const { loading, err, data } = useFetch(API_ENDPOINTS.fullMeal(mealId));
 
   useEffect(() => {
     if (data?.meals !== null && data?.meals !== undefined) {
       setMeal(data.meals[0]);
-      console.log(meal);
     }
   }, [data]);
 
