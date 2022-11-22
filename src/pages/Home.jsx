@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import MealCategorySection from "../components/sections/MealCategorySection";
-import MealCategoryLink from "../components/mealCategoryLink/MealCategoryLink";
+import MealCategories from "../components/mealCategoryLink/MealCategories";
 import useFetch from "../hooks/useFetch";
 import CategoryContext from "../contexts/categoryContext";
 import API_ENDPOINTS from "../endpoints/endpoints";
@@ -22,7 +22,7 @@ const Home = () => {
 
   return (
     <CategoryContext.Provider value={{ mealCategories, setMealCategories }}>
-      <MealCategoryLink />
+      <MealCategories />
       {data?.meals &&
         mealCategories.map((category) => {
           return (

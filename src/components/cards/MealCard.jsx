@@ -11,7 +11,9 @@ const MealCard = ({ mealId, mealName, mealImg }) => {
       <p>{mealName}</p>
       <img className={styles["meal-image"]} src={mealImg} alt={mealName} />
       <Link to={`meal/${mealId}`}>
-        <button onClick={getMealId}>Read more</button>
+        <button className={styles["meal-button"]} onClick={getMealId}>
+          Read more
+        </button>
       </Link>
     </div>
   );
