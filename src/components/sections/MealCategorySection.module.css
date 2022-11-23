@@ -4,11 +4,11 @@
   padding: 5rem 0;
 }
 
-.meal-section-container:nth-child(even) {
+.meal-section-container:nth-child(odd) {
   background-color: rgb(151, 169, 184);
 }
 
-.meal-section-container:nth-child(odd) {
+.meal-section-container:nth-child(even) {
   background-color: rgb(255, 255, 255);
 }
 

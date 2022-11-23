@@ -4,6 +4,7 @@ import MealCategories from "../components/mealCategoryLink/MealCategories";
 import useFetch from "../hooks/useFetch";
 import CategoryContext from "../contexts/categoryContext";
 import API_ENDPOINTS from "../endpoints/endpoints";
+import styles from "./Home.module.css";
 
 const Home = () => {
   const [mealCategories, setMealCategories] = useState([]);
@@ -23,15 +24,17 @@ const Home = () => {
   return (
     <CategoryContext.Provider value={{ mealCategories, setMealCategories }}>
       <MealCategories />
-      {data?.meals &&
-        mealCategories.map((category) => {
-          return (
-            <MealCategorySection
-              key={category.strCategory}
-              mealCategory={category.strCategory}
-            />
-          );
-        })}
+      <div className={styles["category-section-wrapper"]}>
+        {data?.meals &&
+          mealCategories.map((category) => {
+            return (
+              <MealCategorySection
+                key={category.strCategory}
+                mealCategory={category.strCategory}
+              />
+            );
+          })}
+      </div>
     </CategoryContext.Provider>
   );
 };

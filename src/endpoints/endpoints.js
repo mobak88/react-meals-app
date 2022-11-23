@@ -7,6 +7,9 @@ const API_ENDPOINTS = {
     },
     fullMeal: (mealId) => {
         return `${BASE_URL}/lookup.php?i=${mealId}`;
+    },
+    search: (searchString) => {
+        return `${BASE_URL}/search.php?s=${searchString}`;
     }
 };
 
