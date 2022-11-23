@@ -13,6 +13,7 @@ const SearchRecipes = () => {
   const [searchedMeals, setSearchedMeals] = useState([]);
   const [suggestions, setSuggestions] = useState([]);
   const [searchErrMsg, setSearchErrMsg] = useState(null);
+  const [focus, setFocus] = useState(false);
 
   const { data } = useFetch(API_ENDPOINTS.search(searchVal));
 
@@ -60,13 +61,11 @@ const SearchRecipes = () => {
     e.preventDefault();
 
     if (searchVal.length < 1) {
-      console.log(searchVal.length);
       setSearchErrMsg("Please type a search string");
       return;
     }
 
     if (data.meals.length < 1) {
-      console.log(searchedMeals.length);
       setSearchErrMsg("Please try a different search string");
       return;
     }
@@ -86,14 +85,19 @@ const SearchRecipes = () => {
   return (
     <div className={styles["search-container"]}>
       <h1>Search</h1>
-      <div className={styles["suggestions-container"]}>
+      <p>Search for reicpes, it will suggest results from available recipes</p>
+      <div
+        onMouseEnter={() => setFocus(true)}
+        onMouseLeave={() => setFocus(false)}
+        className={styles["suggestions-container"]}
+      >
         <SearchForm
           onChange={onInputChange}
           value={searchVal}
           onClick={onSearch}
           searchErrMsg={searchErrMsg}
         />
-        {searchVal.length > 0 && (
+        {searchVal.length > 0 && focus && (
           <SearchSuggestions
             suggestions={suggestions}
             onClick={onClickSuggestion}
