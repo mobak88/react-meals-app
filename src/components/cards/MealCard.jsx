@@ -5,8 +5,8 @@ const MealCard = ({ mealId, mealName, mealImg }) => {
   return (
     <Link className={styles["meal-button"]} to={`meal/${mealId}`}>
       <div className={styles["meal-container"]}>
-        <p>{mealName}</p>
         <img className={styles["meal-image"]} src={mealImg} alt={mealName} />
+        <p className={styles["meal-name"]}>{mealName}</p>
       </div>
     </Link>
   );
