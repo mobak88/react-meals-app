@@ -1,0 +1,6 @@
+.search-form {
+  display: flex;
+  gap: 0.3rem;
+  background-color: rgb(255, 255, 255);
+  padding: 2rem;
+}
