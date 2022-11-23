@@ -62,20 +62,27 @@ const Meal = () => {
             Meal instructions: {meal.strInstructions}
           </p>
           <h3>Ingredients</h3>
-          <table>
+          <table className={styles["meal-table"]}>
             <thead>
               <tr>
-                <th>Ingredient</th>
-                <th>Measurement</th>
+                <th className={styles["table-data"]}>Ingredient</th>
+                <th className={styles["table-data"]}>Measurement</th>
               </tr>
             </thead>
             <tbody>
               {ingredientsInfo &&
                 ingredientsInfo.map((ingredientInfo, i) => {
                   return (
-                    <tr key={ingredientInfo.ingredient + i}>
-                      <td>{ingredientInfo.ingredient}</td>
-                      <td>{ingredientInfo.measurement}</td>
+                    <tr
+                      className={styles["table-row"]}
+                      key={ingredientInfo.ingredient + i}
+                    >
+                      <td className={styles["table-data"]}>
+                        {ingredientInfo.ingredient}
+                      </td>
+                      <td className={styles["table-data"]}>
+                        {ingredientInfo.measurement}
+                      </td>
                     </tr>
                   );
                 })}
