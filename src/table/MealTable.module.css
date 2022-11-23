@@ -1,0 +1,13 @@
+.meal-table {
+  border-collapse: collapse;
+}
+
+.table-data {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.table-row:nth-child(odd) {
+  background-color: #dddddd;
+}

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import MealTable from "../../table/MealTable";
 import useFetch from "../../hooks/useFetch";
 import API_ENDPOINTS from "../../endpoints/endpoints";
 import styles from "./Meal.module.css";
@@ -17,13 +18,13 @@ const Meal = () => {
     }
   }, [data]);
 
-  const filterMealInfo = (argm) => {
-    const newState = Object.entries(meal).filter((el) => {
-      if (el[0].includes(argm) && el[1].trim().length > 0) {
+  const filterMealInfo = (compareString) => {
+    const newArray = Object.entries(meal).filter((el) => {
+      if (el[0].includes(compareString) && el[1].trim().length > 0) {
         return true;
       }
     });
-    return [...newState];
+    return [...newArray];
   };
 
   useEffect(() => {
@@ -62,32 +63,7 @@ const Meal = () => {
             Meal instructions: {meal.strInstructions}
           </p>
           <h3>Ingredients</h3>
-          <table className={styles["meal-table"]}>
-            <thead>
-              <tr>
-                <th className={styles["table-data"]}>Ingredient</th>
-                <th className={styles["table-data"]}>Measurement</th>
-              </tr>
-            </thead>
-            <tbody>
-              {ingredientsInfo &&
-                ingredientsInfo.map((ingredientInfo, i) => {
-                  return (
-                    <tr
-                      className={styles["table-row"]}
-                      key={ingredientInfo.ingredient + i}
-                    >
-                      <td className={styles["table-data"]}>
-                        {ingredientInfo.ingredient}
-                      </td>
-                      <td className={styles["table-data"]}>
-                        {ingredientInfo.measurement}
-                      </td>
-                    </tr>
-                  );
-                })}
-            </tbody>
-          </table>
+          <MealTable ingredientsInfo={ingredientsInfo} />
         </div>
       )}
     </>
