@@ -18,7 +18,8 @@ const Meal = () => {
     }
   }, [data]);
 
-  const filterMealInfo = (compareString) => {
+  /* Had to create two functions because not all ingredients have measurements */
+  const filterIngredients = (compareString) => {
     const newArray = Object.entries(meal).filter((el) => {
       if (el[0].includes(compareString) && el[1].trim().length > 0) {
         return true;
@@ -27,13 +28,30 @@ const Meal = () => {
     return [...newArray];
   };
 
+  const filterMeasurements = (compareString, compareArray) => {
+    const newArray = Object.entries(meal)
+      .filter((el) => {
+        if (el[0].includes(compareString)) {
+          return true;
+        }
+      })
+      .slice(0, compareArray.length);
+    return newArray;
+  };
+
   useEffect(() => {
     if (Object.keys(meal).length > 0) {
       const ingredientString = "strIngredient";
       const measurementString = "strMeasure";
 
-      const newIngredients = filterMealInfo(ingredientString);
-      const newMeasurements = filterMealInfo(measurementString);
+      const newIngredients = filterIngredients(ingredientString);
+      const newMeasurements = filterMeasurements(
+        measurementString,
+        newIngredients
+      );
+
+      console.log(newMeasurements);
+      console.log(newIngredients);
 
       const newIngredientsInfo = newIngredients.map((ingredient, i) => {
         return {
