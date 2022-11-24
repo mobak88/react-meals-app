@@ -13,6 +13,7 @@ const SiteRoutes = () => {
       <Route path="/category/:foodCategory" element={<Category />} />
       <Route path="/category/:foodCategory/meal/:mealId" element={<Meal />} />
       <Route path="/meal/:mealId" element={<Meal />} />
+      <Route path="/search/meal/:mealId" element={<Meal />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
