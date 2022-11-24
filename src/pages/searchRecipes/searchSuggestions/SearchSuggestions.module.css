@@ -1,7 +1,9 @@
+@import "../../../variables/variables.css";
+
 .suggestions-list {
-  background-color: rgb(255, 255, 255);
+  background-color: var(--white);
   display: flex;
-  border: 1px solid rgb(245, 245, 245);
+  border: 1px solid var(--greyLight);
   flex-direction: column;
   position: absolute;
   width: 100%;
@@ -13,10 +15,10 @@
   padding: 0.4rem 1rem;
   width: 100%;
   text-align: center;
-  border-bottom: 2px solid rgb(245, 245, 245);
+  border-bottom: 1px solid var(--greyLight);
   cursor: pointer;
 }
 
 .suggestions-list-item:hover {
-  background-color: rgb(240, 240, 240);
+  background-color: var(--secondaryColor);
 }

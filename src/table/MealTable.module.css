@@ -1,13 +1,15 @@
+@import "../variables/variables.css";
+
 .meal-table {
   border-collapse: collapse;
 }
 
 .table-data {
-  border: 1px solid #dddddd;
+  border: 1px solid var(--greyLight);
   text-align: left;
   padding: 8px;
 }
 
 .table-row:nth-child(odd) {
-  background-color: #dddddd;
+  background-color: var(--greyLight);
 }

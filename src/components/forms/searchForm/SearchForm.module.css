@@ -1,9 +1,11 @@
+@import "../../../variables/variables.css";
+
 .search-form {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.6rem;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--white);
   padding: 2rem;
 }
 

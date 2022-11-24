@@ -1,10 +1,14 @@
+import Header from "./components/header/Header";
 import SiteRoutes from "./routes/SiteRoutes";
 
 function App() {
   return (
-    <main>
-      <SiteRoutes />
-    </main>
+    <>
+      <Header />
+      <main>
+        <SiteRoutes />
+      </main>
+    </>
   );
 }
 

@@ -1,3 +1,5 @@
+@import "../../variables/variables.css";
+
 .meal-section-container {
   display: flex;
   flex-direction: column;
@@ -5,11 +7,11 @@
 }
 
 .meal-section-container:nth-child(odd) {
-  background-color: rgb(151, 169, 184);
+  background-color: var(--primaryColor);
 }
 
 .meal-section-container:nth-child(even) {
-  background-color: rgb(240, 248, 255);
+  background-color: var(--secondaryColor);
 }
 
 .meal-category-wrapper {
