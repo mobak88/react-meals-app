@@ -44,7 +44,7 @@ yarn preview
 
 ### Site features
 
-The page fetches data from: [TheaMealDB](https://www.themealdb.com/api.php)
+The page fetches data from: [TheaMealDB](https://www.themealdb.com/api.php)  
 Users can:
 
 - See recipes
