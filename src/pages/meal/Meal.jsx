@@ -21,7 +21,9 @@ const Meal = () => {
   /* Had to create two functions because not all ingredients have measurements */
   const filterIngredients = (compareString) => {
     const newArray = Object.entries(meal).filter((el) => {
-      if (el[0].includes(compareString) && el[1].trim().length > 0) {
+      if (el[1] === null || el[1] === undefined) {
+        return false;
+      } else if (el[0].includes(compareString) && el[1].trim().length > 0) {
         return true;
       }
     });
@@ -49,9 +51,6 @@ const Meal = () => {
         measurementString,
         newIngredients
       );
-
-      console.log(newMeasurements);
-      console.log(newIngredients);
 
       const newIngredientsInfo = newIngredients.map((ingredient, i) => {
         return {
