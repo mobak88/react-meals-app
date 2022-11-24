@@ -1,11 +1,12 @@
 # Food app
 
-This project was bootstrapped with [ViteJs](https://vitejs.dev/). Vite is a lightning fast frontend build tool.
+This project was bootstrapped with [ViteJs](https://vitejs.dev/).  
+Vite is a lightning fast frontend build tool.
 
 ### `start`
 
-Runs the app in the development mode.
-Open http://localhost:5173 to view it in the browser.
+Runs the app in the development mode.  
+Open http://localhost:5173 to view it in the browser.  
 Port can be changed in vite.config.js
 
 ```
@@ -26,7 +27,7 @@ yarn build
 
 ### `preview`
 
-start a local web server that serves the built solution from ./dist.
+Start a local web server that serves the built solution from ./dist.
 
 ```
 npm run preview
