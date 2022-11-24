@@ -1,0 +1,23 @@
+@import "../../variables/variables.css";
+
+.not-found-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 2rem;
+}
+
+.not-found-link {
+  text-decoration: none;
+  background-color: var(--primaryColor);
+  padding: 1rem;
+  color: var(--black);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.not-found-link:hover {
+  background-color: var(--apricoteDark);
+}

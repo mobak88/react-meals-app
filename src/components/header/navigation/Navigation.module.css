@@ -13,7 +13,6 @@
   text-decoration: none;
   color: var(--black);
   font-weight: bold;
-  border-bottom: 1px solid var(--black);
 }
 
 .nav-link:hover {

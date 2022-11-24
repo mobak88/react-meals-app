@@ -27,7 +27,7 @@ const Meal = () => {
         return true;
       }
     });
-    return [...newArray];
+    return newArray;
   };
 
   const filterMeasurements = (compareString, compareArray) => {
