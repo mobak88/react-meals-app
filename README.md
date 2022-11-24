@@ -61,7 +61,10 @@ Users can:
 - CSS custom properties
 - Flexbox
 - CSS Grid
-- Reusable components
+- CSS modules - Scoping CSS
 - [React](https://reactjs.org/) - JS library
 - [React router dom](https://reactrouter.com/en/main) - Navigational components
+- Reusable components
+- Custom hooks
+- Context API - Share data between components without passing props
 - React router dom dynamic pages - For recipes and categories
