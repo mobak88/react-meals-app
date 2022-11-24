@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styles from "./Navigation.module.css";
 
 const Navigation = () => {
@@ -6,14 +6,28 @@ const Navigation = () => {
     <nav>
       <ul className={styles["nav-list"]}>
         <li className={styles["nav-list-item"]}>
-          <Link className={styles["nav-link"]} to="/">
+          <NavLink
+            className={(navData) =>
+              navData.isActive
+                ? `${styles["nav-link"]} ${styles.active}`
+                : styles["nav-link"]
+            }
+            to="/"
+          >
             Home
-          </Link>
+          </NavLink>
         </li>
         <li className={styles["nav-list-item"]}>
-          <Link className={styles["nav-link"]} to="/search">
+          <NavLink
+            className={(navData) =>
+              navData.isActive
+                ? `${styles["nav-link"]} ${styles.active}`
+                : styles["nav-link"]
+            }
+            to="/search"
+          >
             Search recipes
-          </Link>
+          </NavLink>
         </li>
       </ul>
     </nav>

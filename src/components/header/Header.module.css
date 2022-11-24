@@ -1,2 +1,6 @@
+@import "../../variables/variables.css";
+
 .header {
+  background-color: var(--primaryColor);
+  padding: 2rem;
 }
