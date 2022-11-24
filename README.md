@@ -49,7 +49,7 @@ The page fetches data from: [TheaMealDB](https://www.themealdb.com/api.php)
 Users can:
 
 - See recipes
-- Search for recipes
+- Search for recipes - User gets sugestions
 - Find recipes by category
 - Create user login
 - Create lists with recipes
