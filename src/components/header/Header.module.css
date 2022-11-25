@@ -3,4 +3,6 @@
 .header {
   background-color: var(--primaryColor);
   padding: 2rem;
+  display: flex;
+  justify-content: center;
 }
