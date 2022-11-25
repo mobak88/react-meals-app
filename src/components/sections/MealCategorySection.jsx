@@ -16,13 +16,17 @@ const MealCategorySection = ({ mealCategory }) => {
   }, [data]);
 
   return (
-    <div className={styles["meal-section-container"]}>
-      <div className={styles["meal-category-wrapper"]}>
-        <h2>{mealCategory}</h2>
-        <p>Sample from {mealCategory.toLowerCase()} recipes</p>
-        <MealCards meals={meals} />
-      </div>
-    </div>
+    <>
+      {data?.meals && (
+        <div className={styles["meal-section-container"]}>
+          <div className={styles["meal-category-wrapper"]}>
+            <h2>{mealCategory}</h2>
+            <p>Sample from {mealCategory.toLowerCase()} recipes</p>
+            <MealCards meals={meals} />
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 

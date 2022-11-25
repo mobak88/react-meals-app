@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import MealCategorySection from "../components/sections/MealCategorySection";
-import MealCategories from "../components/mealCategoryLink/MealCategories";
-import useFetch from "../hooks/useFetch";
-import CategoryContext from "../contexts/categoryContext";
-import API_ENDPOINTS from "../endpoints/endpoints";
+import MealCategorySection from "../../components/sections/MealCategorySection";
+import ChooseMealCategories from "../../components/chooseMealCategories/ChooseMealCategories";
+import useFetch from "../../hooks/useFetch";
+import CategoryContext from "../../contexts/categoryContext";
+import API_ENDPOINTS from "../../endpoints/endpoints";
 import styles from "./Home.module.css";
 
 const Home = () => {
@@ -23,7 +23,7 @@ const Home = () => {
 
   return (
     <CategoryContext.Provider value={{ mealCategories, setMealCategories }}>
-      <MealCategories />
+      <ChooseMealCategories />
       <div className={styles["category-section-wrapper"]}>
         {data?.meals &&
           mealCategories.map((category) => {

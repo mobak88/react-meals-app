@@ -7,7 +7,7 @@ import API_ENDPOINTS from "../../endpoints/endpoints";
 import styles from "./Meal.module.css";
 
 const Meal = () => {
-  const [meal, setMeal] = useState({});
+  const [meal, setMeal] = useState(null);
   const [ingredientsInfo, setIngredientsInfo] = useState([]);
   const { mealId } = useParams();
 
@@ -48,7 +48,7 @@ const Meal = () => {
   };
 
   useEffect(() => {
-    if (Object.keys(meal).length > 0) {
+    if (meal) {
       const ingredientString = "strIngredient";
       const measurementString = "strMeasure";
 
@@ -88,6 +88,11 @@ const Meal = () => {
           <h3>Ingredients</h3>
           <MealTable ingredientsInfo={ingredientsInfo} />
           <NavigateBtn navigateSteps={-1}>Go back</NavigateBtn>
+        </div>
+      )}
+      {!meal && (
+        <div className={styles["meal-container"]}>
+          <h1>Server problem</h1>
         </div>
       )}
     </>
