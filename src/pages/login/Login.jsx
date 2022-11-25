@@ -31,11 +31,14 @@ const Login = () => {
 
   return (
     <div className={styles["login-container"]}>
-      <LoginForm
-        emailInputRef={emailInputRef}
-        passwordInputRef={passwordInputRef}
-        onSubmit={submitHandler}
-      />
+      {!isLoggedIn && (
+        <LoginForm
+          emailInputRef={emailInputRef}
+          passwordInputRef={passwordInputRef}
+          onSubmit={submitHandler}
+        />
+      )}
+      {isLoggedIn && <h1>You are logged in</h1>}
     </div>
   );
 };

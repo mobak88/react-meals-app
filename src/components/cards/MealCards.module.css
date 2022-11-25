@@ -6,3 +6,9 @@
   justify-items: center;
   align-content: center;
 }
+
+.meal-card-container-centered {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}

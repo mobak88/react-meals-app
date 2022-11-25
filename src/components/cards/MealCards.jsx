@@ -3,7 +3,13 @@ import styles from "./MealCards.module.css";
 
 const MealCards = ({ meals }) => {
   return (
-    <div className={styles["meal-card-container"]}>
+    <div
+      className={
+        meals.length < 5
+          ? styles["meal-card-container-centered"]
+          : styles["meal-card-container"]
+      }
+    >
       {meals &&
         meals.map((meal) => {
           return (

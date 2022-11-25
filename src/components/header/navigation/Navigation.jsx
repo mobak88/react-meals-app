@@ -41,6 +41,18 @@ const Navigation = () => {
             Login
           </NavLink>
         </li>
+        <li className={styles["nav-list-item"]}>
+          <NavLink
+            className={(navData) =>
+              navData.isActive
+                ? `${styles["nav-link"]} ${styles.active}`
+                : styles["nav-link"]
+            }
+            to="/logout"
+          >
+            Logout
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );

@@ -1,3 +1,4 @@
+import Button from "../../buttons/button/Button";
 import styles from "./LoginForm.module.css";
 
 const LoginForm = ({ emailInputRef, passwordInputRef, onSubmit }) => {
@@ -17,7 +18,7 @@ const LoginForm = ({ emailInputRef, passwordInputRef, onSubmit }) => {
           ref={passwordInputRef}
         />
       </div>
-      <button>Login</button>
+      <Button>Login</Button>
     </form>
   );
 };

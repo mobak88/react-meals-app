@@ -1,3 +1,4 @@
+import Button from "../../buttons/button/Button";
 import styles from "./SearchForm.module.css";
 
 const SearchForm = ({ onChange, value, onClick, searchErrMsg }) => {
@@ -13,9 +14,7 @@ const SearchForm = ({ onChange, value, onClick, searchErrMsg }) => {
           onChange={onChange}
           value={value}
         />
-        <button className={styles["search-form-button"]} onClick={onClick}>
-          Search
-        </button>
+        <Button onClick={onClick}>Search</Button>
       </div>
       <div>{searchErrMsg && <p>{searchErrMsg}</p>}</div>
     </form>
