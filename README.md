@@ -46,7 +46,7 @@ yarn preview
 
 ### Login
 
-Username: test@test.com
+Username: test@test.com  
 Password: 1234
 
 ### Site features
