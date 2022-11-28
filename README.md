@@ -85,7 +85,7 @@ Users can:
 
 ## Variables
 
-### Color scheme
+### Base url
 
 Base url can be found in .env file.
 
