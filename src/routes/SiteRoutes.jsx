@@ -6,6 +6,7 @@ import Login from "../pages/login/Login";
 import NotFound from "../pages/notFound/NotFound";
 import Category from "../pages/category/Category";
 import Logout from "../pages/logout/Logout";
+import LikedMeals from "../pages/likedMeals/LikedMeals";
 
 const SiteRoutes = () => {
   return (
@@ -18,6 +19,7 @@ const SiteRoutes = () => {
       <Route path="/search/meal/:mealId" element={<Meal />} />
       <Route path="/login" element={<Login />} />
       <Route path="/logout" element={<Logout />} />
+      <Route path="/liked-meals" element={<LikedMeals />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

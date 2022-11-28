@@ -1,15 +1,9 @@
 import MealCard from "./MealCard";
-import styles from "./MealCards.module.css";
+import MealCardContainer from "../ui/mealCardContainer/MealCardContainer";
 
 const MealCards = ({ meals }) => {
   return (
-    <div
-      className={
-        meals.length < 5
-          ? styles["meal-card-container-centered"]
-          : styles["meal-card-container"]
-      }
-    >
+    <MealCardContainer meals={meals}>
       {meals &&
         meals.map((meal) => {
           return (
@@ -22,7 +16,7 @@ const MealCards = ({ meals }) => {
             />
           );
         })}
-    </div>
+    </MealCardContainer>
   );
 };
 

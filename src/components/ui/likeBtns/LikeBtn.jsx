@@ -5,8 +5,7 @@ import HeartFilled from "../../../assets/heart-filled.svg";
 import styles from "./LikeBtn.module.css";
 
 const LikeBtn = ({ onClick, mealId }) => {
-  const { isLoggedIn, likedRecipes, setLikedRecipes } =
-    useContext(IsLoggedInContext);
+  const { isLoggedIn, likedRecipes } = useContext(IsLoggedInContext);
 
   const likedRecipe = likedRecipes.find((recipe) => {
     if (recipe.idMeal === mealId) {
@@ -16,7 +15,7 @@ const LikeBtn = ({ onClick, mealId }) => {
 
   return (
     <>
-      {!likedRecipe && (
+      {!likedRecipe && isLoggedIn && (
         <img
           onClick={onClick}
           className={styles["meal-img"]}
@@ -24,7 +23,7 @@ const LikeBtn = ({ onClick, mealId }) => {
           alt="Add to liked recipes button"
         />
       )}
-      {likedRecipe && (
+      {likedRecipe && isLoggedIn && (
         <img
           onClick={onClick}
           className={styles["meal-img"]}

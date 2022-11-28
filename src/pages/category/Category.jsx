@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import MealCards from "../../components/cards/MealCards";
+import MealsWrapper from "../../components/ui/mealsWrapper/MealsWrapper";
 import API_ENDPOINTS from "../../endpoints/endpoints";
 import useFetch from "../../hooks/useFetch";
 import styles from "./Category.module.css";
@@ -24,12 +25,12 @@ const Category = () => {
   if (loading) return `...Loading`;
 
   return (
-    <div className={styles["category-wrapper"]}>
+    <MealsWrapper>
       <h1>All {foodCategory.toLowerCase()} meals</h1>
       <div className={styles["meal-category-wrapper"]}>
         <MealCards meals={meals} />
       </div>
-    </div>
+    </MealsWrapper>
   );
 };
 

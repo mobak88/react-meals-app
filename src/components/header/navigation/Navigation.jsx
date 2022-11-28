@@ -53,6 +53,18 @@ const Navigation = () => {
             Logout
           </NavLink>
         </li>
+        <li className={styles["nav-list-item"]}>
+          <NavLink
+            className={(navData) =>
+              navData.isActive
+                ? `${styles["nav-link"]} ${styles.active}`
+                : styles["nav-link"]
+            }
+            to="/liked-meals"
+          >
+            Liked meals
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );
