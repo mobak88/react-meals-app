@@ -20,6 +20,7 @@ const SiteRoutes = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/logout" element={<Logout />} />
       <Route path="/liked-meals" element={<LikedMeals />} />
+      <Route path="/liked-meals/meal/:mealId" element={<Meal />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
