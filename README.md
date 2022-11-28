@@ -62,8 +62,8 @@ Users can:
 - See recipes
 - Search for recipes - User gets sugestions
 - Find recipes by category
-- Create lists with recipes
 - Add recipes to favourites
+- See all liked recipes
 
 ## My process
 
