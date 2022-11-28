@@ -38,11 +38,15 @@ yarn preview
 ### Table of contents
 
 - [Overview](#overview)
-  - [Site features](#site-features)
   - [Login](#login)
+  - [Site features](#site-features)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
+- [My process](#my-process)
+
+  - [Built with](#built-with)
+
+  ## Overview
 
 ### Login
 
@@ -60,6 +64,8 @@ Users can:
 - Create lists with recipes
 - Add recipes to favourites
 
+  ## Site features
+
 ### Built with
 
 - Semantic HTML5 markup
@@ -74,3 +80,4 @@ Users can:
 - Custom hooks
 - Context API - Share data between components without passing props
 - React router dom dynamic pages - For recipes and categories
+- Localstorage - Store logged in and liked
