@@ -42,11 +42,10 @@ yarn preview
   - [Site features](#site-features)
 - [My process](#my-process)
   - [Built with](#built-with)
-- [My process](#my-process)
+- [Style](#style)
+  - [Color scheme](#color-scheme)
 
-  - [Built with](#built-with)
-
-  ## Overview
+## Overview
 
 ### Login
 
@@ -64,7 +63,7 @@ Users can:
 - Create lists with recipes
 - Add recipes to favourites
 
-  ## Site features
+## My process
 
 ### Built with
 
@@ -81,3 +80,9 @@ Users can:
 - Context API - Share data between components without passing props
 - React router dom dynamic pages - For recipes and categories
 - Localstorage - Store logged in and liked
+
+## Style
+
+### Color scheme
+
+Color scheme can be found in variables.css file as variables.
