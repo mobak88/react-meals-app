@@ -3,9 +3,10 @@
 .meal-img {
   height: 2.2rem;
   padding: 0.2rem;
-  position: absolute;
-  top: 0.4rem;
-  right: 1rem;
   background-color: var(--greyLight);
   cursor: pointer;
+}
+
+.like-btn {
+  border: none;
 }

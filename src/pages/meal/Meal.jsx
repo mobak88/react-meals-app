@@ -1,15 +1,21 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
+import IsLoggedInContext from "../../contexts/isLoggedInContext";
 import MealTable from "../../components/ui/table/MealTable";
 import NavigateBtn from "../../components/ui/buttons/navigateButton/NavigateBtn";
 import useFetch from "../../hooks/useFetch";
 import API_ENDPOINTS from "../../endpoints/endpoints";
 import styles from "./Meal.module.css";
+import LikeBtn from "../../components/ui/likeBtns/LikeBtn";
+import findLikedRecipe from "../../utils/findLikedRecipe";
 
 const Meal = () => {
   const [meal, setMeal] = useState(null);
   const [ingredientsInfo, setIngredientsInfo] = useState([]);
   const { mealId } = useParams();
+
+  const { isLoggedIn, likedRecipes, setLikedRecipes } =
+    useContext(IsLoggedInContext);
 
   const { loading, err, data } = useFetch(API_ENDPOINTS.fullMeal(mealId));
 
@@ -18,6 +24,29 @@ const Meal = () => {
       setMeal(data.meals[0]);
     }
   }, [data]);
+
+  useEffect(() => {
+    if (isLoggedIn) {
+      localStorage.setItem("likedMeals", JSON.stringify(likedRecipes));
+    }
+  }, [likedRecipes]);
+
+  const handleLikedMeal = () => {
+    const likedRecipe = findLikedRecipe(likedRecipes, mealId);
+
+    if (likedRecipe) {
+      setLikedRecipes((prev) => {
+        const newRecipes = prev.filter((recipe) => {
+          if (recipe.idMeal !== mealId) {
+            return true;
+          }
+        });
+        return newRecipes;
+      });
+    } else {
+      setLikedRecipes((prev) => [...prev, { ...meal }]);
+    }
+  };
 
   const filterIngredients = (compareString) => {
     const newArray = Object.entries(meal).filter((el) => {
@@ -76,6 +105,7 @@ const Meal = () => {
             alt={meal.strMeal}
           />
           <h1>{meal.strMeal}</h1>
+          <LikeBtn mealId={mealId} onClick={handleLikedMeal} />
           <p className={styles["meal-text"]}>
             Meal instructions: {meal.strInstructions}
           </p>

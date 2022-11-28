@@ -2,6 +2,7 @@ import { useContext, useEffect } from "react";
 import IsLoggedInContext from "../../contexts/isLoggedInContext";
 import { Link } from "react-router-dom";
 import LikeBtn from "../ui/likeBtns/LikeBtn";
+import findLikedRecipe from "../../utils/findLikedRecipe";
 import styles from "./MealCard.module.css";
 
 const MealCard = ({ mealId, mealName, mealImg, meals }) => {
@@ -15,11 +16,7 @@ const MealCard = ({ mealId, mealName, mealImg, meals }) => {
   }, [likedRecipes]);
 
   const handleLikedMeal = () => {
-    const likedRecipe = likedRecipes.find((recipe) => {
-      if (recipe.idMeal === mealId) {
-        return true;
-      }
-    });
+    const likedRecipe = findLikedRecipe(likedRecipes, mealId);
 
     if (likedRecipe) {
       setLikedRecipes((prev) => {
@@ -44,7 +41,11 @@ const MealCard = ({ mealId, mealName, mealImg, meals }) => {
           <p className={styles["meal-name"]}>{mealName}</p>
         </div>
       </Link>
-      {isLoggedIn && <LikeBtn onClick={handleLikedMeal} mealId={mealId} />}
+      {isLoggedIn && (
+        <div className={styles["like-meal-wrapper"]}>
+          <LikeBtn onClick={handleLikedMeal} mealId={mealId} />
+        </div>
+      )}
     </div>
   );
 };
