@@ -8,7 +8,7 @@ const LikedMeals = () => {
   const { isLoggedIn, likedRecipes } = useContext(IsLoggedInContext);
   return (
     <MealsWrapper>
-      <h1>All liked meals</h1>
+      <h1>Your liked meals</h1>
       <MealCardContainer meals={likedRecipes}>
         {likedRecipes.length > 0 &&
           likedRecipes.map((recipe) => {

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import SearchForm from "../../components/ui/forms/searchForm/SearchForm";
 import MealCards from "../../components/cards/MealCards";
-import SearchSuggestions from "./searchSuggestions/SearchSuggestions";
+import SearchSuggestions from "../../components/searchSuggestions/SearchSuggestions";
 import useFetch from "../../hooks/useFetch";
 import API_ENDPOINTS from "../../endpoints/endpoints";
 import styles from "./SearchRecipes.module.css";
