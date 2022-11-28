@@ -42,8 +42,10 @@ yarn preview
   - [Site features](#site-features)
 - [My process](#my-process)
   - [Built with](#built-with)
-- [Style](#style)
+- [Variables](#Variables)
+  - [Base url](#base-url)
   - [Color scheme](#color-scheme)
+  - [Endpoints](#endpoints)
 
 ## Overview
 
@@ -81,8 +83,16 @@ Users can:
 - React router dom dynamic pages - For recipes and categories
 - Localstorage - Store logged in and liked
 
-## Style
+## Variables
+
+### Color scheme
+
+Base url can be found in .env file.
 
 ### Color scheme
 
 Color scheme can be found in variables.css file as variables.
+
+### Endpoints
+
+Endpoints can be found as an object in endpoints.js
