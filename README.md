@@ -38,10 +38,16 @@ yarn preview
 ### Table of contents
 
 - [Overview](#overview)
-  - [Site features](#Site-features)
+  - [Site features](#site-features)
+  - [Login](#login)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
+
+### Login
+
+Username: test@test.com
+Password: 1234
 
 ### Site features
 
