@@ -10,23 +10,32 @@ const LikedMeals = () => {
   return (
     <>
       {isLoggedIn && (
-        <MealsWrapper>
-          <h1>Your liked meals</h1>
-          <MealCardContainer meals={likedRecipes}>
-            {likedRecipes.length > 0 &&
-              likedRecipes.map((recipe) => {
-                return (
-                  <MealCard
-                    key={recipe.idMeal}
-                    mealId={recipe.idMeal}
-                    mealName={recipe.strMeal}
-                    mealImg={recipe.strMealThumb}
-                    meals={likedRecipes}
-                  />
-                );
-              })}
-          </MealCardContainer>
-        </MealsWrapper>
+        <>
+          {likedRecipes.length > 0 && (
+            <MealsWrapper>
+              <h1>Your liked meals</h1>
+              <MealCardContainer meals={likedRecipes}>
+                {likedRecipes.length > 0 &&
+                  likedRecipes.map((recipe) => {
+                    return (
+                      <MealCard
+                        key={recipe.idMeal}
+                        mealId={recipe.idMeal}
+                        mealName={recipe.strMeal}
+                        mealImg={recipe.strMealThumb}
+                        meals={likedRecipes}
+                      />
+                    );
+                  })}
+              </MealCardContainer>
+            </MealsWrapper>
+          )}
+          {likedRecipes.length < 1 && (
+            <MealsWrapper>
+              <h1>No liked meals</h1>
+            </MealsWrapper>
+          )}
+        </>
       )}
       {!isLoggedIn && (
         <CenterContainer>
