@@ -51,7 +51,6 @@ Users can:
 - See recipes
 - Search for recipes - User gets sugestions
 - Find recipes by category
-- Create user login
 - Create lists with recipes
 - Add recipes to favourites
 

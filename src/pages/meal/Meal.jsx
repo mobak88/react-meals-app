@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import MealTable from "../../table/MealTable";
-import NavigateBtn from "../../components/buttons/NavigateBtn";
+import MealTable from "../../components/ui/table/MealTable";
+import NavigateBtn from "../../components/ui/buttons/navigateButton/NavigateBtn";
 import useFetch from "../../hooks/useFetch";
 import API_ENDPOINTS from "../../endpoints/endpoints";
 import styles from "./Meal.module.css";

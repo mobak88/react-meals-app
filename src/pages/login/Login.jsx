@@ -1,7 +1,7 @@
 import { useContext, useRef, useEffect } from "react";
-import LoginForm from "../../components/forms/loginForm/LoginForm";
+import LoginForm from "../../components/ui/forms/loginForm/LoginForm";
+import CenterContainer from "../../components/ui/centerContainer/CenterContainer";
 import IsLoggedInContext from "../../contexts/isLoggedInContext";
-import styles from "./Login.module.css";
 
 const Login = () => {
   const { isLoggedIn, setIsLoggedIn } = useContext(IsLoggedInContext);
@@ -30,7 +30,7 @@ const Login = () => {
   };
 
   return (
-    <div className={styles["login-container"]}>
+    <CenterContainer>
       {!isLoggedIn && (
         <LoginForm
           emailInputRef={emailInputRef}
@@ -39,7 +39,7 @@ const Login = () => {
         />
       )}
       {isLoggedIn && <h1>You are logged in</h1>}
-    </div>
+    </CenterContainer>
   );
 };
 

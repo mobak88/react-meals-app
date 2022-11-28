@@ -1,4 +1,4 @@
-@import "../../../variables/variables.css";
+@import "../../../../variables/variables.css";
 
 .search-form {
   display: flex;

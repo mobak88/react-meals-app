@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import SearchForm from "../../components/forms/searchForm/SearchForm";
+import SearchForm from "../../components/ui/forms/searchForm/SearchForm";
 import MealCards from "../../components/cards/MealCards";
 import SearchSuggestions from "./searchSuggestions/SearchSuggestions";
 import useFetch from "../../hooks/useFetch";
