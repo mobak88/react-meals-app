@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import IsLoggedInContext from "../../contexts/isLoggedInContext";
 import { Link } from "react-router-dom";
 import LikeBtn from "../ui/likeBtns/LikeBtn";
@@ -7,6 +7,12 @@ import styles from "./MealCard.module.css";
 const MealCard = ({ mealId, mealName, mealImg, meals }) => {
   const { isLoggedIn, likedRecipes, setLikedRecipes } =
     useContext(IsLoggedInContext);
+
+  useEffect(() => {
+    if (isLoggedIn) {
+      localStorage.setItem("likedMeals", JSON.stringify(likedRecipes));
+    }
+  }, [likedRecipes]);
 
   const handleLikedMeal = () => {
     const likedRecipe = likedRecipes.find((recipe) => {

@@ -8,9 +8,9 @@ function App() {
     JSON.parse(localStorage.getItem("loggedIn")) || false
   );
 
-  const [likedRecipes, setLikedRecipes] = useState([]);
-
-  console.log(likedRecipes);
+  const [likedRecipes, setLikedRecipes] = useState(
+    JSON.parse(localStorage.getItem("likedMeals")) || []
+  );
 
   return (
     <IsLoggedInContext.Provider
