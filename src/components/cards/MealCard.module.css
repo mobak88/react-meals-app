@@ -33,3 +33,7 @@
 .meal-name {
   font-weight: bold;
 }
+
+.meal-wrapper {
+  position: relative;
+}

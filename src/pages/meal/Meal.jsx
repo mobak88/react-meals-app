@@ -19,12 +19,6 @@ const Meal = () => {
     }
   }, [data]);
 
-  /**
-   *Had to create two functions because not all ingredients have measurements
-   *I could have made it one function with another parameter and if check
-   *but I think that would have made the function difficult to read
-   */
-
   const filterIngredients = (compareString) => {
     const newArray = Object.entries(meal).filter((el) => {
       if (el[1] === null || el[1] === undefined) {

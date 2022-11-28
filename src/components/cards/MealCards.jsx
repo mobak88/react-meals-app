@@ -18,6 +18,7 @@ const MealCards = ({ meals }) => {
               mealId={meal.idMeal}
               mealName={meal.strMeal}
               mealImg={meal.strMealThumb}
+              meals={meals}
             />
           );
         })}
