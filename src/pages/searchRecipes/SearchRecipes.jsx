@@ -92,15 +92,15 @@ const SearchRecipes = () => {
         className={styles["suggestions-container"]}
       >
         <SearchForm
-          onChange={handleInputChange}
+          onInputChange={handleInputChange}
           value={searchVal}
-          onClick={handleSearch}
+          onButtonClick={handleSearch}
           searchErrMsg={searchErrMsg}
         />
         {searchVal.length > 0 && focus && (
           <SearchSuggestions
             suggestions={suggestions}
-            onClick={handleClickSuggestion}
+            onSuggestionClick={handleClickSuggestion}
           />
         )}
       </div>

@@ -35,7 +35,7 @@ const Login = () => {
         <LoginForm
           emailInputRef={emailInputRef}
           passwordInputRef={passwordInputRef}
-          onSubmit={handleSubmit}
+          onSubmitForm={handleSubmit}
         />
       )}
       {isLoggedIn && <h1>You are logged in</h1>}

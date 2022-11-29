@@ -1,7 +1,7 @@
 import Button from "../../buttons/button/Button";
 import styles from "./SearchForm.module.css";
 
-const SearchForm = ({ onChange, value, onClick, searchErrMsg }) => {
+const SearchForm = ({ onInputChange, value, onButtonClick, searchErrMsg }) => {
   return (
     <form className={styles["search-form"]}>
       <div className={styles["form-elements-wrapper"]}>
@@ -11,10 +11,10 @@ const SearchForm = ({ onChange, value, onClick, searchErrMsg }) => {
           type="text"
           id="search-food"
           placeholder="Search for..."
-          onChange={onChange}
+          onChange={onInputChange}
           value={value}
         />
-        <Button onClick={onClick}>Search</Button>
+        <Button onButtonClick={onButtonClick}>Search</Button>
       </div>
       <div>{searchErrMsg && <p>{searchErrMsg}</p>}</div>
     </form>

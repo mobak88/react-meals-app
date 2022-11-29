@@ -1,9 +1,9 @@
 import Button from "../../buttons/button/Button";
 import styles from "./LoginForm.module.css";
 
-const LoginForm = ({ emailInputRef, passwordInputRef, onSubmit }) => {
+const LoginForm = ({ emailInputRef, passwordInputRef, onSubmitForm }) => {
   return (
-    <form className={styles["login-form"]} onSubmit={onSubmit}>
+    <form className={styles["login-form"]} onSubmit={onSubmitForm}>
       <div className={styles["input-container"]}>
         <label htmlFor="username">Username:</label>
         <input required id="username" type="email" ref={emailInputRef} />

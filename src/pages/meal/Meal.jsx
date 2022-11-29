@@ -101,7 +101,7 @@ const Meal = () => {
             alt={meal.strMeal}
           />
           <h1>{meal.strMeal}</h1>
-          <LikeBtn onClick={handleLikedMeal} mealId={mealId} large={true} />
+          <LikeBtn onLikeClick={handleLikedMeal} mealId={mealId} large={true} />
           <div className={styles["meal-info-container"]}>
             <h2>Meal instructions</h2>
             <MealInstructions mealInstrucions={meal.strInstructions} />

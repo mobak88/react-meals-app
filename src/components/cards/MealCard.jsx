@@ -38,7 +38,7 @@ const MealCard = ({ mealId, mealName, mealImg, meals }) => {
       </Link>
       {isLoggedIn && (
         <div className={styles["like-meal-wrapper"]}>
-          <LikeBtn onClick={handleLikedMeal} mealId={mealId} />
+          <LikeBtn onLikeClick={handleLikedMeal} mealId={mealId} />
         </div>
       )}
     </div>

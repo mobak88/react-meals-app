@@ -18,7 +18,7 @@ const Logout = () => {
 
   return (
     <CenterContainer>
-      {isLoggedIn && <Button onClick={handleLogout}>Logout</Button>}
+      {isLoggedIn && <Button onButtonClick={handleLogout}>Logout</Button>}
       {!isLoggedIn && <h1>You are not logged in</h1>}
     </CenterContainer>
   );
