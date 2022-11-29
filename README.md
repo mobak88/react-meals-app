@@ -127,3 +127,4 @@ I did not see a point in adding social media links that does not exist, they can
 - CSS naming with hyphens
 - Export default for components
 - Break down components when it makes sense or if it can be reused
+- Empty tags instead of React Fragments
