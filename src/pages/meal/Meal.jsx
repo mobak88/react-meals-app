@@ -8,6 +8,7 @@ import API_ENDPOINTS from "../../endpoints/endpoints";
 import styles from "./Meal.module.css";
 import LikeBtn from "../../components/ui/likeBtns/LikeBtn";
 import findLikedRecipe from "../../utils/findLikedRecipe";
+import MealInstructions from "../../components/mealInstructions/MealInstructions";
 
 const Meal = () => {
   const [meal, setMeal] = useState(null);
@@ -30,6 +31,28 @@ const Meal = () => {
       localStorage.setItem("likedMeals", JSON.stringify(likedRecipes));
     }
   }, [likedRecipes]);
+
+  useEffect(() => {
+    if (meal) {
+      const ingredientString = "strIngredient";
+      const measurementString = "strMeasure";
+
+      const newIngredients = filterIngredients(ingredientString);
+      const newMeasurements = filterMeasurements(
+        measurementString,
+        newIngredients
+      );
+
+      const newIngredientsInfo = newIngredients.map((ingredient, i) => {
+        return {
+          ingredient: ingredient[1],
+          measurement: newMeasurements[i][1],
+        };
+      });
+
+      setIngredientsInfo([...newIngredientsInfo]);
+    }
+  }, [meal]);
 
   const handleLikedMeal = () => {
     const likedRecipe = findLikedRecipe(likedRecipes, mealId);
@@ -65,28 +88,6 @@ const Meal = () => {
     return newArray;
   };
 
-  useEffect(() => {
-    if (meal) {
-      const ingredientString = "strIngredient";
-      const measurementString = "strMeasure";
-
-      const newIngredients = filterIngredients(ingredientString);
-      const newMeasurements = filterMeasurements(
-        measurementString,
-        newIngredients
-      );
-
-      const newIngredientsInfo = newIngredients.map((ingredient, i) => {
-        return {
-          ingredient: ingredient[1],
-          measurement: newMeasurements[i][1],
-        };
-      });
-
-      setIngredientsInfo([...newIngredientsInfo]);
-    }
-  }, [meal]);
-
   if (loading) return <p>Loading...</p>;
   if (err) return <p>Error...</p>;
 
@@ -103,7 +104,7 @@ const Meal = () => {
           <LikeBtn onClick={handleLikedMeal} mealId={mealId} large={true} />
           <div className={styles["meal-info-container"]}>
             <h2>Meal instructions</h2>
-            <p className={styles["meal-text"]}>{meal.strInstructions}</p>
+            <MealInstructions mealInstrucions={meal.strInstructions} />
           </div>
           <div className={styles["meal-info-container"]}>
             <h3>Ingredients</h3>
