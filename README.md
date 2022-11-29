@@ -46,6 +46,9 @@ yarn preview
   - [Base url](#base-url)
   - [Color scheme](#color-scheme)
   - [Endpoints](#endpoints)
+- [Further development](#my-process)
+  - [Backend](#backend)
+  - [Frontend](#frontend)
 
 ## Overview
 
@@ -96,3 +99,14 @@ Color scheme can be found in variables.css file as variables.
 ### Endpoints
 
 Endpoints can be found as an object in endpoints.js
+
+## Further development
+
+### Backend
+
+A CRUD backend where users can create profile, recipes and lists of recipes.
+
+### Frontend
+
+Create user, recipes, lists of recipes and share recipes.  
+Recipe adjustments based on portions, meal planner and calorie count for each meal.
