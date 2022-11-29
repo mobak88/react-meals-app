@@ -113,7 +113,7 @@ A CRUD backend where users can create profile, recipes and lists of recipes.
 
 Create user, recipes, lists of recipes and share recipes.  
 Recipe adjustments based on portions, meal planner, calorie count and nutrinional values for each meal.  
-Comment recipe.
+Comment recipe and breadcrumbs.
 
 ### Socials
 
