@@ -49,11 +49,13 @@ yarn preview
 - [Further development](#my-process)
   - [Backend](#backend)
   - [Frontend](#frontend)
+  - [Socials](#socials)
 
 ## Overview
 
 ### Login
 
+The app assumes the user already have created a user  
 Username: test@test.com  
 Password: 1234
 
@@ -110,3 +112,7 @@ A CRUD backend where users can create profile, recipes and lists of recipes.
 
 Create user, recipes, lists of recipes and share recipes.  
 Recipe adjustments based on portions, meal planner and calorie count for each meal.
+
+### Socials
+
+I did not see a point in adding social media links that does not exist, they can easily be added at a further stage
