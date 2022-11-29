@@ -1,9 +1,3 @@
-const findLikedRecipe = (arr, mealId) => {
-    return arr.find((recipe) => {
-        if (recipe.idMeal === mealId) {
-            return true;
-        }
-    });
-};
+const findLikedRecipe = (arr, mealId) => arr.find((recipe) => recipe.idMeal === mealId);
 
 export default findLikedRecipe;

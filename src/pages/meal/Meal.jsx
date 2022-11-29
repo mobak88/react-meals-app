@@ -35,14 +35,9 @@ const Meal = () => {
     const likedRecipe = findLikedRecipe(likedRecipes, mealId);
 
     if (likedRecipe) {
-      setLikedRecipes((prev) => {
-        const newRecipes = prev.filter((recipe) => {
-          if (recipe.idMeal !== mealId) {
-            return true;
-          }
-        });
-        return newRecipes;
-      });
+      setLikedRecipes((prev) =>
+        prev.filter((recipe) => recipe.idMeal !== mealId)
+      );
     } else {
       setLikedRecipes((prev) => [...prev, { ...meal }]);
     }
