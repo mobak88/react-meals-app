@@ -50,6 +50,8 @@ yarn preview
   - [Backend](#backend)
   - [Frontend](#frontend)
   - [Socials](#socials)
+- [Code style](#code-style)
+  - [Style](#style)
 
 ## Overview
 
@@ -116,3 +118,15 @@ Recipe adjustments based on portions, meal planner and calorie count for each me
 ### Socials
 
 I did not see a point in adding social media links that does not exist, they can easily be added at a further stage
+
+## Code style
+
+### Style
+
+- ES6 syntax
+- Camelcased function names, props and parameters
+- Descriptive function names, prop names and parameters
+- Destructuring props
+- CSS naming with hyphens
+- Export default for components
+- Break down components when it makes sense or if it can be reused
