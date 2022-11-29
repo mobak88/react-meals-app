@@ -10,3 +10,8 @@
 .like-btn {
   border: none;
 }
+
+.meal-img-large {
+  height: 3.2rem;
+  padding: 0.4rem;
+}
