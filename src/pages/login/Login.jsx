@@ -14,7 +14,7 @@ const Login = () => {
     }
   }, [isLoggedIn]);
 
-  const submitHandler = (e) => {
+  const handleSubmit = (e) => {
     const userEmail = "test@test.com";
     const userPassword = "1234";
 
@@ -35,7 +35,7 @@ const Login = () => {
         <LoginForm
           emailInputRef={emailInputRef}
           passwordInputRef={passwordInputRef}
-          onSubmit={submitHandler}
+          onSubmit={handleSubmit}
         />
       )}
       {isLoggedIn && <h1>You are logged in</h1>}

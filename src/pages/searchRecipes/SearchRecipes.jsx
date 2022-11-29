@@ -53,11 +53,11 @@ const SearchRecipes = () => {
     }
   }, [searchVal, data]);
 
-  const onInputChange = (e) => {
+  const handleInputChange = (e) => {
     setSearchVal(e.target.value);
   };
 
-  const onSearch = (e) => {
+  const handleSearch = (e) => {
     e.preventDefault();
 
     if (searchVal.length < 1) {
@@ -74,7 +74,7 @@ const SearchRecipes = () => {
     setSearchErrMsg(null);
   };
 
-  const onClickSuggestion = (sugestedMeal, suggestionObj) => {
+  const handleClickSuggestion = (sugestedMeal, suggestionObj) => {
     setSearchVal(sugestedMeal);
     setSearchedMeals([{ ...suggestionObj }]);
     setClickedSuggestion((prev) => !prev);
@@ -92,15 +92,15 @@ const SearchRecipes = () => {
         className={styles["suggestions-container"]}
       >
         <SearchForm
-          onChange={onInputChange}
+          onChange={handleInputChange}
           value={searchVal}
-          onClick={onSearch}
+          onClick={handleSearch}
           searchErrMsg={searchErrMsg}
         />
         {searchVal.length > 0 && focus && (
           <SearchSuggestions
             suggestions={suggestions}
-            onClick={onClickSuggestion}
+            onClick={handleClickSuggestion}
           />
         )}
       </div>

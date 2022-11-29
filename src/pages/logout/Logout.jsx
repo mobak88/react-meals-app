@@ -6,7 +6,7 @@ import CenterContainer from "../../components/ui/centerContainer/CenterContainer
 const Logout = () => {
   const { isLoggedIn, setIsLoggedIn } = useContext(IsLoggedInContext);
 
-  const logoutHandler = () => {
+  const handleLogout = () => {
     setIsLoggedIn(false);
   };
 
@@ -18,7 +18,7 @@ const Logout = () => {
 
   return (
     <CenterContainer>
-      {isLoggedIn && <Button onClick={logoutHandler}>Logout</Button>}
+      {isLoggedIn && <Button onClick={handleLogout}>Logout</Button>}
       {!isLoggedIn && <h1>You are not logged in</h1>}
     </CenterContainer>
   );
