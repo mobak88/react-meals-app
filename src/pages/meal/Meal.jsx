@@ -101,11 +101,14 @@ const Meal = () => {
           />
           <h1>{meal.strMeal}</h1>
           <LikeBtn mealId={mealId} onClick={handleLikedMeal} />
-          <p className={styles["meal-text"]}>
-            Meal instructions: {meal.strInstructions}
-          </p>
-          <h3>Ingredients</h3>
-          <MealTable ingredientsInfo={ingredientsInfo} />
+          <div className={styles["meal-info-container"]}>
+            <h2>Meal instructions</h2>
+            <p className={styles["meal-text"]}>{meal.strInstructions}</p>
+          </div>
+          <div className={styles["meal-info-container"]}>
+            <h3>Ingredients</h3>
+            <MealTable ingredientsInfo={ingredientsInfo} />
+          </div>
           <NavigateBtn navigateSteps={-1}>Go back</NavigateBtn>
         </div>
       )}
