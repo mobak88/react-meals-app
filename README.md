@@ -1,6 +1,6 @@
 # Food app
 
-This project was bootstrapped with [ViteJs](https://vitejs.dev/).  
+This project was created with [ViteJs](https://vitejs.dev/).  
 Vite is a lightning fast frontend build tool.
 
 ### `start`
