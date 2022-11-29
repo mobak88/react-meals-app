@@ -22,14 +22,6 @@ const MealCard = ({ mealId, mealName, mealImg, meals }) => {
       setLikedRecipes((prev) =>
         prev.filter((recipe) => recipe.idMeal !== mealId)
       );
-      /* setLikedRecipes((prev) => {
-        const newRecipes = prev.filter((recipe) => {
-          if (recipe.idMeal !== mealId) {
-            return true;
-          }
-        });
-        return newRecipes;
-      }); */
     } else {
       const newMeal = meals.find((meal) => meal.idMeal === mealId);
       setLikedRecipes((prev) => [...prev, { ...newMeal }]);
