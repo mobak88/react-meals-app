@@ -68,8 +68,8 @@ Users can:
 - See recipes
 - Search for recipes - User gets sugestions
 - Find recipes by category
-- Add/remove recipes to favourites
-- See all liked recipes
+- Add/remove recipes to favourites if logged in
+- See all liked recipes if logged in
 
 ## My process
 
