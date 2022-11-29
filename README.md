@@ -51,7 +51,6 @@ yarn preview
   - [Frontend](#frontend)
   - [Socials](#socials)
 - [Code style](#code-style)
-  - [Style](#style)
 
 ## Overview
 
@@ -120,8 +119,6 @@ Recipe adjustments based on portions, meal planner and calorie count for each me
 I did not see a point in adding social media links that does not exist, they can easily be added at a further stage
 
 ## Code style
-
-### Style
 
 - ES6 syntax
 - Camelcased function names, props and parameters
