@@ -130,3 +130,5 @@ I did not see a point in adding social media links that does not exist, they can
 - Export default for components
 - Break down components when it makes sense or if it can be reused
 - Empty tags instead of React Fragments
+- I did not match the pre built event handler names in props because  
+  it can get confusing if the same prop names are used to many places
