@@ -1,4 +1,4 @@
-.meal-categories-wrapper {
+.meal-links-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6,13 +6,13 @@
   gap: 2rem;
 }
 
-.meal-link-categories-container {
+.meal-link-container {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 2rem;
 }
 
-.meal-link-categories-wrapper {
+.meal-link-wrapper {
   display: flex;
   justify-content: center;
 }

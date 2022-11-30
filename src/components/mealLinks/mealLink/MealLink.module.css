@@ -1,4 +1,4 @@
-.meal-category-link {
+.meal-link {
   background-color: rgb(240, 248, 255);
   padding: 1rem;
   cursor: pointer;
@@ -8,6 +8,6 @@
   color: rgb(0, 0, 0);
 }
 
-.meal-category-link:hover {
+.meal-link:hover {
   background-color: rgb(255, 228, 196);
 }
