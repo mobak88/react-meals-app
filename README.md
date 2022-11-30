@@ -138,5 +138,5 @@ I did not see a point in adding social media links that does not exist, they can
 ## Technical debt
 
 The app does not have a caching solution and could need it if the database would grow.  
-Lazy loading and load more features could be benefitial to minimize data usage.  
+Lazy loading feature could be benefitial to minimize data usage.  
 TypeScript and unit testing are not implemented which can lead to more bugs.
