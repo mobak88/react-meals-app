@@ -6,12 +6,12 @@ import API_ENDPOINTS from "../../endpoints/endpoints";
 import useFetch from "../../hooks/useFetch";
 import styles from "./Category.module.css";
 
-const Category = () => {
+const Category = ({ filterType }) => {
   const [meals, setmeals] = useState([]);
-  const { foodCategory } = useParams();
+  const { categoryType } = useParams();
 
   const { loading, err, data } = useFetch(
-    API_ENDPOINTS.filterCategory(foodCategory)
+    API_ENDPOINTS[filterType](categoryType)
   );
 
   useEffect(() => {
@@ -26,7 +26,7 @@ const Category = () => {
 
   return (
     <MealsWrapper>
-      <h1>All {foodCategory.toLowerCase()} meals</h1>
+      <h1>All {categoryType.toLowerCase()} meals</h1>
       <div className={styles["meal-category-wrapper"]}>
         <MealCards meals={meals} />
       </div>
