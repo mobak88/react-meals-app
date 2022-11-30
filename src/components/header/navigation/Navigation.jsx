@@ -36,6 +36,30 @@ const Navigation = () => {
                 ? `${styles["nav-link"]} ${styles.active}`
                 : styles["nav-link"]
             }
+            to="/liked-meals"
+          >
+            Liked meals
+          </NavLink>
+        </li>
+        <li className={styles["nav-list-item"]}>
+          <NavLink
+            className={(navData) =>
+              navData.isActive
+                ? `${styles["nav-link"]} ${styles.active}`
+                : styles["nav-link"]
+            }
+            to="/areas"
+          >
+            Food areas
+          </NavLink>
+        </li>
+        <li className={styles["nav-list-item"]}>
+          <NavLink
+            className={(navData) =>
+              navData.isActive
+                ? `${styles["nav-link"]} ${styles.active}`
+                : styles["nav-link"]
+            }
             to="/login"
           >
             Login
@@ -51,18 +75,6 @@ const Navigation = () => {
             to="/logout"
           >
             Logout
-          </NavLink>
-        </li>
-        <li className={styles["nav-list-item"]}>
-          <NavLink
-            className={(navData) =>
-              navData.isActive
-                ? `${styles["nav-link"]} ${styles.active}`
-                : styles["nav-link"]
-            }
-            to="/liked-meals"
-          >
-            Liked meals
           </NavLink>
         </li>
       </ul>
