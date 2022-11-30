@@ -2,6 +2,7 @@ import { useState } from "react";
 import IsLoggedInContext from "./contexts/isLoggedInContext";
 import Header from "./components/header/Header";
 import SiteRoutes from "./routes/SiteRoutes";
+import Footer from "./footer/Footer";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(
@@ -20,6 +21,7 @@ function App() {
       <main>
         <SiteRoutes />
       </main>
+      <Footer />
     </IsLoggedInContext.Provider>
   );
 }
