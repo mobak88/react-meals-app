@@ -4,7 +4,7 @@ import MealCategorySection from "../../components/sections/MealCategorySection";
 import API_ENDPOINTS from "../../endpoints/endpoints";
 import useFetch from "../../hooks/useFetch";
 
-const MealsByArea = () => {
+const MealsByAreas = () => {
   const [mealAreas, setMealAreas] = useState([]);
 
   const { loading, err, data } = useFetch(API_ENDPOINTS.areas);
@@ -40,4 +40,4 @@ const MealsByArea = () => {
   );
 };
 
-export default MealsByArea;
+export default MealsByAreas;

@@ -7,7 +7,7 @@ import NotFound from "../pages/notFound/NotFound";
 import Category from "../pages/category/Category";
 import Logout from "../pages/logout/Logout";
 import LikedMeals from "../pages/likedMeals/LikedMeals";
-import MealsByArea from "../pages/mealsByArea/MealsByArea";
+import MealsByAreas from "../pages/mealsByAreas/MealsByAreas";
 
 const SiteRoutes = () => {
   const filterArea = "filterArea";
@@ -16,7 +16,7 @@ const SiteRoutes = () => {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/search" element={<SearchRecipes />} />
-      <Route path="/areas" element={<MealsByArea />} />
+      <Route path="/areas" element={<MealsByAreas />} />
       <Route path="/areas/meal/:mealId" element={<Meal />} />
       <Route
         path="/areas/area/:categoryType"
