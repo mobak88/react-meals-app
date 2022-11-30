@@ -17,7 +17,7 @@ const MealCategorySection = ({ mealCategory, filterType }) => {
 
   return (
     <>
-      {data?.meals && (
+      {meals && (
         <div className={styles["meal-section-container"]}>
           <div className={styles["meal-category-wrapper"]}>
             <h2>{mealCategory}</h2>
