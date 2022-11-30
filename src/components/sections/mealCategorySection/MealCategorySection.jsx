@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import MealCards from "../cards/MealCards";
+import MealCards from "../../cards/MealCards";
 import styles from "./MealCategorySection.module.css";
-import useFetch from "../../hooks/useFetch";
-import API_ENDPOINTS from "../../endpoints/endpoints";
+import useFetch from "../../../hooks/useFetch";
+import API_ENDPOINTS from "../../../endpoints/endpoints";
 
 const MealCategorySection = ({ mealCategory, filterType }) => {
   const [meals, setmeals] = useState([]);

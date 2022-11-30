@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react";
-import MealCategorySection from "../../components/sections/MealCategorySection";
+import MealCategorySection from "../../components/sections/mealCategorySection/MealCategorySection";
 import MealCategoryLinks from "../../components/mealCategoryLinks/MealCategoryLinks";
 import useFetch from "../../hooks/useFetch";
 import API_ENDPOINTS from "../../endpoints/endpoints";
 import findFilterMethod from "../../utils/findFilterMethod";
-import styles from "./Home.module.css";
+import ShowMoreBtn from "../../components/ui/buttons/showMoreBtn/ShowMoreBtn";
 
 const Home = () => {
   const [mealCategories, setMealCategories] = useState([]);
+  const [visibleCount, setVisibleCount] = useState(5);
 
   const { loading, err, data } = useFetch(API_ENDPOINTS.categories);
 
@@ -16,6 +17,10 @@ const Home = () => {
       setMealCategories([...data.meals]);
     }
   }, [data]);
+
+  const handleShowMoreItems = () => {
+    setVisibleCount((prev) => prev + 5);
+  };
 
   if (err) return `Error: ${err}`;
 
@@ -30,17 +35,21 @@ const Home = () => {
             mealObjKey={Object.keys(mealCategories[0])[0]}
             categoryType="category"
           />
-          <div className={styles["category-section-wrapper"]}>
-            {mealCategories.map((category) => {
-              return (
-                <MealCategorySection
-                  key={category.strCategory}
-                  mealCategory={category.strCategory}
-                  filterType={findFilterMethod("filtercategory")}
-                />
-              );
-            })}
-          </div>
+          {mealCategories.slice(0, visibleCount).map((category) => {
+            return (
+              <MealCategorySection
+                key={category.strCategory}
+                mealCategory={category.strCategory}
+                filterType={findFilterMethod("filtercategory")}
+              />
+            );
+          })}
+          {visibleCount < mealCategories.length && (
+            <ShowMoreBtn
+              onShowMoreClick={handleShowMoreItems}
+              visibleCount={visibleCount}
+            />
+          )}
         </>
       )}
     </>
