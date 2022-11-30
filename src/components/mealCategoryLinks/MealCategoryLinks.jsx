@@ -1,7 +1,7 @@
-import MealLink from "./mealCategoryLink/MealCategoryLink";
+import MealCategoryLink from "./mealCategoryLink/MealCategoryLink";
 import styles from "./MealCategoryLinks.module.css";
 
-const MealLinks = ({ mealArr, categoryType, mealKey }) => {
+const MealCategoryLinks = ({ mealArr, categoryType, mealKey }) => {
   return (
     <>
       {mealArr.length > 0 && (
@@ -11,7 +11,7 @@ const MealLinks = ({ mealArr, categoryType, mealKey }) => {
             <div className={styles["meal-link-container"]}>
               {mealArr.map((obj, i) => {
                 return (
-                  <MealLink
+                  <MealCategoryLink
                     key={obj[mealKey] + i}
                     categoryType={categoryType}
                     category={obj[mealKey]}
@@ -26,4 +26,4 @@ const MealLinks = ({ mealArr, categoryType, mealKey }) => {
   );
 };
 
-export default MealLinks;
+export default MealCategoryLinks;

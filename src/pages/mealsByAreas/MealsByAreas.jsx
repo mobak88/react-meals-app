@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import MealLinks from "../../components/mealCategoryLinks/MealCategoryLinks";
+import MealCategoryLinks from "../../components/mealCategoryLinks/MealCategoryLinks";
 import MealCategorySection from "../../components/sections/MealCategorySection";
 import API_ENDPOINTS from "../../endpoints/endpoints";
 import useFetch from "../../hooks/useFetch";
@@ -21,7 +21,7 @@ const MealsByAreas = () => {
 
   return (
     <>
-      <MealLinks
+      <MealCategoryLinks
         mealArr={mealAreas}
         mealKey={"strArea"}
         categoryType={"area"}

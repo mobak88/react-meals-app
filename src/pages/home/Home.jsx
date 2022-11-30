@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import MealCategorySection from "../../components/sections/MealCategorySection";
-import MealLinks from "../../components/mealCategoryLinks/MealCategoryLinks";
+import MealCategoryLinks from "../../components/mealCategoryLinks/MealCategoryLinks";
 import useFetch from "../../hooks/useFetch";
 import API_ENDPOINTS from "../../endpoints/endpoints";
 import styles from "./Home.module.css";
@@ -22,7 +22,7 @@ const Home = () => {
 
   return (
     <>
-      <MealLinks
+      <MealCategoryLinks
         mealArr={mealCategories}
         mealKey={"strCategory"}
         categoryType={"category"}
