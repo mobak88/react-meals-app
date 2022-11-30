@@ -51,6 +51,7 @@ yarn preview
   - [Frontend](#frontend)
   - [Socials](#socials)
 - [Code style](#code-style)
+- [Technical debt](#technical-debt)
 
 ## Overview
 
@@ -133,3 +134,9 @@ I did not see a point in adding social media links that does not exist, they can
 - Empty tags instead of React Fragments
 - I did not match the pre built event handler names in props because  
   it can get confusing if the same prop names are used to many places
+
+## Technical debt
+
+The app does not have a caching solution and could need it if the database would grow.  
+Lazy loading and load more features could be benefitial to minimize data usage.
+TypeScript and unit testing are not implemented which can lead to more bugs.
