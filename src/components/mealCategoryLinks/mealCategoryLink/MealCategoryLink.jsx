@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import styles from "./MealLink.module.css";
+import styles from "./MealCategoryLink.module.css";
 
-const MealLink = ({ categoryType, category }) => {
+const MealCategoryLink = ({ categoryType, category }) => {
   return (
     <Link
       to={`${categoryType}/${category.toLowerCase()}`}
@@ -12,4 +12,4 @@ const MealLink = ({ categoryType, category }) => {
   );
 };
 
-export default MealLink;
+export default MealCategoryLink;

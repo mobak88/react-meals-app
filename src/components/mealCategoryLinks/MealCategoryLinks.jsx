@@ -1,5 +1,5 @@
-import MealLink from "./mealLink/MealLink";
-import styles from "./MealLinks.module.css";
+import MealLink from "./mealCategoryLink/MealCategoryLink";
+import styles from "./MealCategoryLinks.module.css";
 
 const MealLinks = ({ mealArr, categoryType, mealKey }) => {
   return (

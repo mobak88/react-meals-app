@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import MealCategorySection from "../../components/sections/MealCategorySection";
-import MealLinks from "../../components/mealLinks/MealLinks";
+import MealLinks from "../../components/mealCategoryLinks/MealCategoryLinks";
 import useFetch from "../../hooks/useFetch";
 import API_ENDPOINTS from "../../endpoints/endpoints";
 import styles from "./Home.module.css";
