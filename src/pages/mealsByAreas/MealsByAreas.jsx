@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import MealCategoryLinks from "../../components/mealCategoryLinks/MealCategoryLinks";
 import MealCategorySection from "../../components/sections/MealCategorySection";
 import API_ENDPOINTS from "../../endpoints/endpoints";
+import findFilterMethod from "../../utils/findFilterMethod";
 import useFetch from "../../hooks/useFetch";
 
 const MealsByAreas = () => {
@@ -21,21 +22,24 @@ const MealsByAreas = () => {
 
   return (
     <>
-      <MealCategoryLinks
-        mealArr={mealAreas}
-        mealKey="strArea"
-        categoryType="area"
-      />
-      {mealAreas &&
-        mealAreas.map((area) => {
-          return (
-            <MealCategorySection
-              key={area.strArea}
-              mealCategory={area.strArea}
-              filterType="filterArea"
-            />
-          );
-        })}
+      {mealAreas.length > 0 && (
+        <>
+          <MealCategoryLinks
+            mealArr={mealAreas}
+            mealObjKey={Object.keys(mealAreas[0])[0]}
+            categoryType="area"
+          />
+          {mealAreas.map((area) => {
+            return (
+              <MealCategorySection
+                key={area.strArea}
+                mealCategory={area.strArea}
+                filterType={findFilterMethod("filterarea")}
+              />
+            );
+          })}
+        </>
+      )}
     </>
   );
 };

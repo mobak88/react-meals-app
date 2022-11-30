@@ -3,6 +3,7 @@ import MealCategorySection from "../../components/sections/MealCategorySection";
 import MealCategoryLinks from "../../components/mealCategoryLinks/MealCategoryLinks";
 import useFetch from "../../hooks/useFetch";
 import API_ENDPOINTS from "../../endpoints/endpoints";
+import findFilterMethod from "../../utils/findFilterMethod";
 import styles from "./Home.module.css";
 
 const Home = () => {
@@ -22,23 +23,26 @@ const Home = () => {
 
   return (
     <>
-      <MealCategoryLinks
-        mealArr={mealCategories}
-        mealKey="strCategory"
-        categoryType="category"
-      />
-      <div className={styles["category-section-wrapper"]}>
-        {mealCategories &&
-          mealCategories.map((category) => {
-            return (
-              <MealCategorySection
-                key={category.strCategory}
-                mealCategory={category.strCategory}
-                filterType="filterCategory"
-              />
-            );
-          })}
-      </div>
+      {mealCategories.length > 0 && (
+        <>
+          <MealCategoryLinks
+            mealArr={mealCategories}
+            mealObjKey={Object.keys(mealCategories[0])[0]}
+            categoryType="category"
+          />
+          <div className={styles["category-section-wrapper"]}>
+            {mealCategories.map((category) => {
+              return (
+                <MealCategorySection
+                  key={category.strCategory}
+                  mealCategory={category.strCategory}
+                  filterType={findFilterMethod("filtercategory")}
+                />
+              );
+            })}
+          </div>
+        </>
+      )}
     </>
   );
 };
