@@ -7,14 +7,32 @@ import NotFound from "../pages/notFound/NotFound";
 import Category from "../pages/category/Category";
 import Logout from "../pages/logout/Logout";
 import LikedMeals from "../pages/likedMeals/LikedMeals";
+import MealsByArea from "../pages/mealsByArea/MealsByArea";
 
 const SiteRoutes = () => {
+  const filterArea = "filterArea";
+
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/search" element={<SearchRecipes />} />
-      <Route path="/category/:foodCategory" element={<Category />} />
-      <Route path="/category/:foodCategory/meal/:mealId" element={<Meal />} />
+      <Route path="/areas" element={<MealsByArea />} />
+      <Route path="/areas/meal/:mealId" element={<Meal />} />
+      <Route
+        path="/areas/area/:categoryType"
+        element={<Category filterType={filterArea} />}
+      />
+      <Route path="/areas/area/:categoryType/meal/:mealId" element={<Meal />} />
+      <Route
+        path="/category/:categoryType"
+        element={<Category filterType={"filterCategory"} />}
+      />
+      <Route
+        path="/area/:categoryType"
+        element={<Category filterType={filterArea} />}
+      />
+      <Route path="/category/:categoryType/meal/:mealId" element={<Meal />} />
+      <Route path="/area/:categoryType/meal/:mealId" element={<Meal />} />
       <Route path="/meal/:mealId" element={<Meal />} />
       <Route path="/search/meal/:mealId" element={<Meal />} />
       <Route path="/login" element={<Login />} />
