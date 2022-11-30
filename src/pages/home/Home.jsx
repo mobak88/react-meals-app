@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import MealCategorySection from "../../components/sections/MealCategorySection";
-import ChooseMealCategories from "../../components/chooseMealCategories/ChooseMealCategories";
+import MealLinks from "../../components/mealLinks/MealLinks";
 import useFetch from "../../hooks/useFetch";
-import CategoryContext from "../../contexts/categoryContext";
 import API_ENDPOINTS from "../../endpoints/endpoints";
 import styles from "./Home.module.css";
 
@@ -22,20 +21,25 @@ const Home = () => {
   if (loading) return `...Loading`;
 
   return (
-    <CategoryContext.Provider value={{ mealCategories, setMealCategories }}>
-      <ChooseMealCategories />
+    <>
+      <MealLinks
+        mealArr={mealCategories}
+        mealKey={"strCategory"}
+        categoryType={"category"}
+      />
       <div className={styles["category-section-wrapper"]}>
-        {data?.meals &&
+        {mealCategories &&
           mealCategories.map((category) => {
             return (
               <MealCategorySection
                 key={category.strCategory}
                 mealCategory={category.strCategory}
+                filterType="filterCategory"
               />
             );
           })}
       </div>
-    </CategoryContext.Provider>
+    </>
   );
 };
 
