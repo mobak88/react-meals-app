@@ -24,8 +24,8 @@ const Home = () => {
     <>
       <MealCategoryLinks
         mealArr={mealCategories}
-        mealKey={"strCategory"}
-        categoryType={"category"}
+        mealKey="strCategory"
+        categoryType="category"
       />
       <div className={styles["category-section-wrapper"]}>
         {mealCategories &&

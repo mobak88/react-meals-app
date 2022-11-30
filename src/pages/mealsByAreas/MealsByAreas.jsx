@@ -23,8 +23,8 @@ const MealsByAreas = () => {
     <>
       <MealCategoryLinks
         mealArr={mealAreas}
-        mealKey={"strArea"}
-        categoryType={"area"}
+        mealKey="strArea"
+        categoryType="area"
       />
       {mealAreas &&
         mealAreas.map((area) => {
