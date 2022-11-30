@@ -1,0 +1,21 @@
+@import "../../../../variables/variables.css";
+
+.nav-list-item {
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--black);
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  color: var(--secondaryColor);
+  border-bottom: 1px solid var(--secondaryColor);
+}
+
+.active {
+  color: var(--apricoteLight);
+  border-bottom: 1px solid var(--apricoteLight);
+}

@@ -1,82 +1,17 @@
 import { NavLink } from "react-router-dom";
 import styles from "./Navigation.module.css";
+import NavLi from "./navLi/NavLi";
 
 const Navigation = () => {
   return (
     <nav>
       <ul className={styles["nav-list"]}>
-        <li className={styles["nav-list-item"]}>
-          <NavLink
-            className={(navData) =>
-              navData.isActive
-                ? `${styles["nav-link"]} ${styles.active}`
-                : styles["nav-link"]
-            }
-            to="/"
-          >
-            Home
-          </NavLink>
-        </li>
-        <li className={styles["nav-list-item"]}>
-          <NavLink
-            className={(navData) =>
-              navData.isActive
-                ? `${styles["nav-link"]} ${styles.active}`
-                : styles["nav-link"]
-            }
-            to="/search"
-          >
-            Search recipes
-          </NavLink>
-        </li>
-        <li className={styles["nav-list-item"]}>
-          <NavLink
-            className={(navData) =>
-              navData.isActive
-                ? `${styles["nav-link"]} ${styles.active}`
-                : styles["nav-link"]
-            }
-            to="/liked-meals"
-          >
-            Liked meals
-          </NavLink>
-        </li>
-        <li className={styles["nav-list-item"]}>
-          <NavLink
-            className={(navData) =>
-              navData.isActive
-                ? `${styles["nav-link"]} ${styles.active}`
-                : styles["nav-link"]
-            }
-            to="/areas"
-          >
-            Food areas
-          </NavLink>
-        </li>
-        <li className={styles["nav-list-item"]}>
-          <NavLink
-            className={(navData) =>
-              navData.isActive
-                ? `${styles["nav-link"]} ${styles.active}`
-                : styles["nav-link"]
-            }
-            to="/login"
-          >
-            Login
-          </NavLink>
-        </li>
-        <li className={styles["nav-list-item"]}>
-          <NavLink
-            className={(navData) =>
-              navData.isActive
-                ? `${styles["nav-link"]} ${styles.active}`
-                : styles["nav-link"]
-            }
-            to="/logout"
-          >
-            Logout
-          </NavLink>
-        </li>
+        <NavLi toPage="/" pageName="Home" />
+        <NavLi toPage="/search" pageName="Search recipes" />
+        <NavLi toPage="/liked-meals" pageName="Liked meals" />
+        <NavLi toPage="/areas" pageName="Food areas" />
+        <NavLi toPage="/login" pageName="Login" />
+        <NavLi toPage="/logout" pageName="Logout" />
       </ul>
     </nav>
   );
