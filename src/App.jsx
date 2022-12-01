@@ -2,7 +2,7 @@ import { useState } from "react";
 import IsLoggedInContext from "./contexts/isLoggedInContext";
 import Header from "./components/header/Header";
 import SiteRoutes from "./routes/SiteRoutes";
-import Footer from "./footer/Footer";
+import Footer from "./components/footer/Footer";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(

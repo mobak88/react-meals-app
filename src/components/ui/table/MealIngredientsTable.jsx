@@ -1,6 +1,6 @@
-import styles from "./MealTable.module.css";
+import styles from "./MealIngredientsTable.module.css";
 
-const MealTable = ({ ingredientsInfo }) => {
+const MealIngredientsTable = ({ ingredientsInfo }) => {
   return (
     <table className={styles["meal-table"]}>
       <thead>
@@ -31,4 +31,4 @@ const MealTable = ({ ingredientsInfo }) => {
   );
 };
 
-export default MealTable;
+export default MealIngredientsTable;

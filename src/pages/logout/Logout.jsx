@@ -6,15 +6,15 @@ import CenterContainer from "../../components/ui/centerContainer/CenterContainer
 const Logout = () => {
   const { isLoggedIn, setIsLoggedIn } = useContext(IsLoggedInContext);
 
-  const handleLogout = () => {
-    setIsLoggedIn(false);
-  };
-
   useEffect(() => {
     if (!isLoggedIn) {
       localStorage.setItem("loggedIn", JSON.stringify(isLoggedIn));
     }
   }, [isLoggedIn]);
+
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+  };
 
   return (
     <CenterContainer>

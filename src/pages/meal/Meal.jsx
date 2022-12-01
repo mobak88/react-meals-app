@@ -1,12 +1,12 @@
 import { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import IsLoggedInContext from "../../contexts/isLoggedInContext";
-import MealTable from "../../components/ui/table/MealTable";
+import MealIngredientsTable from "../../components/ui/table/MealIngredientsTable";
 import NavigateBtn from "../../components/ui/buttons/navigateButton/NavigateBtn";
 import useFetch from "../../hooks/useFetch";
 import API_ENDPOINTS from "../../endpoints/endpoints";
 import styles from "./Meal.module.css";
-import LikeBtn from "../../components/ui/likeBtns/LikeBtn";
+import LikeBtn from "../../components/ui/likeBtn/LikeBtn";
 import findLikedRecipe from "../../utils/findLikedRecipe";
 import MealInstructions from "../../components/mealInstructions/MealInstructions";
 
@@ -108,7 +108,7 @@ const Meal = () => {
           </div>
           <div className={styles["meal-info-container"]}>
             <h3>Ingredients</h3>
-            <MealTable ingredientsInfo={ingredientsInfo} />
+            <MealIngredientsTable ingredientsInfo={ingredientsInfo} />
           </div>
           <NavigateBtn navigateSteps={-1}>Go back</NavigateBtn>
         </div>

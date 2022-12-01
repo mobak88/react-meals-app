@@ -1,7 +1,7 @@
 import { useContext, useEffect } from "react";
 import IsLoggedInContext from "../../contexts/isLoggedInContext";
 import { Link } from "react-router-dom";
-import LikeBtn from "../ui/likeBtns/LikeBtn";
+import LikeBtn from "../ui/likeBtn/LikeBtn";
 import findLikedRecipe from "../../utils/findLikedRecipe";
 import styles from "./MealCard.module.css";
 
