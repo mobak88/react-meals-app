@@ -25,7 +25,7 @@ const SiteRoutes = () => {
       <Route path="/areas/area/:categoryType/meal/:mealId" element={<Meal />} />
       <Route
         path="/category/:categoryType"
-        element={<Category filterType={"filterCategory"} />}
+        element={<Category filterType="filterCategory" />}
       />
       <Route
         path="/area/:categoryType"
