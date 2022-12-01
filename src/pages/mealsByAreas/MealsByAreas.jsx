@@ -5,22 +5,19 @@ import API_ENDPOINTS from "../../endpoints/endpoints";
 import findFilterMethod from "../../utils/findFilterMethod";
 import useFetch from "../../hooks/useFetch";
 import ShowMoreBtn from "../../components/ui/buttons/showMoreBtn/ShowMoreBtn";
+import useShowMore from "../../hooks/useShowMore";
 
 const MealsByAreas = () => {
   const [mealAreas, setMealAreas] = useState([]);
-  const [visibleCount, setVisibleCount] = useState(5);
 
   const { loading, err, data } = useFetch(API_ENDPOINTS.areas);
+  const [visibleCount, incrementVisibleCount] = useShowMore(5);
 
   useEffect(() => {
     if (data?.meals !== null && data?.meals !== undefined) {
       setMealAreas([...data.meals]);
     }
   }, [data]);
-
-  const handleShowMoreItems = () => {
-    setVisibleCount((prev) => prev + 5);
-  };
 
   if (err) return `Error: ${err}`;
 
@@ -46,7 +43,7 @@ const MealsByAreas = () => {
           })}
           {visibleCount < mealAreas.length && (
             <ShowMoreBtn
-              onShowMoreClick={handleShowMoreItems}
+              onShowMoreClick={incrementVisibleCount}
               visibleCount={visibleCount}
             />
           )}

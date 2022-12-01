@@ -6,7 +6,7 @@ import NavigateBtn from "../../components/ui/buttons/navigateButton/NavigateBtn"
 import useFetch from "../../hooks/useFetch";
 import API_ENDPOINTS from "../../endpoints/endpoints";
 import styles from "./Meal.module.css";
-import LikeBtn from "../../components/ui/likeBtn/LikeBtn";
+import LikeBtn from "../../components/ui/buttons/likeBtn/LikeBtn";
 import findLikedRecipe from "../../utils/findLikedRecipe";
 import MealInstructions from "../../components/mealInstructions/MealInstructions";
 

@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import IsLoggedInContext from "../../../contexts/isLoggedInContext";
-import HeartOutlined from "../../../assets/heart-outline.svg";
-import HeartFilled from "../../../assets/heart-filled.svg";
-import findLikedRecipe from "../../../utils/findLikedRecipe";
+import IsLoggedInContext from "../../../../contexts/isLoggedInContext";
+import HeartOutlined from "../../../../assets/heart-outline.svg";
+import HeartFilled from "../../../../assets/heart-filled.svg";
+import findLikedRecipe from "../../../../utils/findLikedRecipe";
 import styles from "./LikeBtn.module.css";
 
 const LikeBtn = ({ onLikeClick, mealId, large }) => {

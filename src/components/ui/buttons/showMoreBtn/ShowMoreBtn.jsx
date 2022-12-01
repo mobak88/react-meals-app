@@ -10,7 +10,7 @@ const ShowMoreBtn = ({ onShowMoreClick, visibleCount }) => {
       }
     >
       <button className={styles["show-more-btn"]} onClick={onShowMoreClick}>
-        Load more
+        Show more
       </button>
     </div>
   );
