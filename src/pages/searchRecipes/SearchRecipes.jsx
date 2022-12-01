@@ -65,7 +65,7 @@ const SearchRecipes = () => {
       return;
     }
 
-    if (data.meals.length < 1) {
+    if (data?.meals === null || data?.meals.length < 1) {
       setSearchErrMsg("Please try a different search string");
       return;
     }
