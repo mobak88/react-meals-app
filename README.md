@@ -51,6 +51,7 @@ yarn preview
   - [Frontend](#frontend)
   - [Socials](#socials)
 - [Code style](#code-style)
+- [Fetching data](#fetching-data)
 - [Technical debt](#technical-debt)
 
 ## Overview
@@ -141,3 +142,8 @@ The app does not have a caching solution and could need it if the database would
 Lazy loading feature could be benefitial to minimize data usage.  
 TypeScript and unit testing are not implemented which can lead to more bugs.
 The app also needs authentication to be able to handle user signup and login.
+
+## Fetching data
+
+Custom useFetch hook are used to fetch data. It is not necessary to use context for the data from the API in this app because  
+the components that render data are set up to be able to handle it without passing data more than once or twice down the component tree.
