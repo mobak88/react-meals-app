@@ -135,6 +135,8 @@ I did not see a point in adding social media links that does not exist, they can
 - Empty tags instead of React Fragments
 - I did not match the pre built event handler names in props because  
   it can get confusing if the same prop names are used to many places
+- I have tried my best to get variables programmatically to avoid hard coding  
+  and spelling errors
 
 ## Technical debt
 
