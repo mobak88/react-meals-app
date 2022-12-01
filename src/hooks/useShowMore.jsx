@@ -4,7 +4,7 @@ const useShowMore = (initialCount) => {
   const [visibleCount, setVisibleCount] = useState(initialCount);
 
   const incrementVisibleCount = () => {
-    setVisibleCount((prev) => prev + 5);
+    setVisibleCount((prev) => prev + initialCount);
   };
 
   return [visibleCount, incrementVisibleCount];
