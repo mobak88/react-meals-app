@@ -133,19 +133,15 @@ I did not see a point in adding social media links that does not exist, they can
 - Export default for components
 - Break down components when it makes sense or if it can be reused
 - Empty tags instead of React Fragments
-- I did not match the pre built event handler names in props because  
-  it can get confusing if the same prop names are used to many places
-- I have tried my best to get variables programmatically to avoid hard coding  
-  and spelling errors
+- I did not match the pre built event handler names in props because it can get confusing if the same prop names are used to many places
+- I have tried my best to get variables programmatically to avoid hard coding and spelling errors
 
 ## Technical debt
 
 The app does not have a caching solution and could need it if the database would grow.  
-Lazy loading feature could be benefitial to minimize data usage.  
-TypeScript and unit testing are not implemented which can lead to more bugs.
+Lazy loading feature could be benefitial to minimize data usage. TypeScript and unit testing are not implemented which can lead to more bugs.
 The app also needs authentication to be able to handle user signup and login.
 
 ## Fetching data
 
-Custom useFetch hook are used to fetch data. It is not necessary to use context for the data from the API in this app because  
-the components that render data are set up to be able to handle it without passing data more than once or twice down the component tree.
+Custom useFetch hook are used to fetch data. It is not necessary to use context for the data from the API in this app because the components that render data are set up to be able to handle it without passing data more than once or twice down the component tree.
