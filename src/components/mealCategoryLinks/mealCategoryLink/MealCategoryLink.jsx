@@ -4,7 +4,9 @@ import styles from "./MealCategoryLink.module.css";
 const MealCategoryLink = ({ categoryType, category }) => {
   return (
     <Link
-      to={`${categoryType}/${category.toLowerCase()}`}
+      to={`${categoryType.trim().toLowerCase()}/${category
+        .trim()
+        .toLowerCase()}`}
       className={styles["meal-link"]}
     >
       {category}
