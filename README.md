@@ -140,4 +140,4 @@ I did not see a point in adding social media links that does not exist, they can
 The app does not have a caching solution and could need it if the database would grow.  
 Lazy loading feature could be benefitial to minimize data usage.  
 TypeScript and unit testing are not implemented which can lead to more bugs.
-The app also needs authentication to be able to handle users.
+The app also needs authentication to be able to handle user signup and login.
